@@ -1,0 +1,60 @@
+
+
+@for $i from 1 to 6 {
+  #articulo#{$i} {
+    grid-area: "#{$i}";
+  }
+}
+.modulo {
+  display: grid;
+  grid-template-areas:
+    "1"
+    "2"
+    "3"
+    "4"
+    "5"
+    "6";
+    
+grid-gap: 5px;
+justify-content: center;
+}
+
+.lineaSeparacion {
+  width: 95%;
+  height: 1px;
+  background: #cccccc;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 10px 15px;
+}
+
+.volverI {
+  position: fixed !important;
+  @extend .volver;
+}
+
+@media only screen and (min-width: 768px) {
+  .modulo {
+    grid-template-areas:
+      "1 2"
+      "3 4"
+      "5 6";
+      grid-column: 1fr 1fr;
+      grid-row: 1fr 1fr 1fr;
+      grid-gap: 50px;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+  @media only screen and (min-width: 1920px) {
+    .modulo {
+      grid-template-areas:
+      "1 2 3"
+      "4 5 6";
+      grid-row: 1fr 1fr;
+      grid-column: 1fr 1fr 1fr;
+    justify-content:space-around;
+    align-content: space-around;
+    
+  }
+}

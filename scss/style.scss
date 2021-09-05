@@ -1,0 +1,117 @@
+@import "article";
+@import "article-no-photo";
+@import "article-author";
+@import "modulo";
+
+@font-face {
+  font-family: SuecaSlab;
+  src: url("../fonts/suecaslab-medium.eot");
+  src: url("../fonts/suecaslab-medium.eot") format("embedded-opentype"),
+    url("../fonts/suecaslab-medium.woff2") format("woff2"),
+    url("../fonts/suecaslab-medium.woff") format("woff"),
+    url("../fonts/suecaslab-medium.ttf") format("truetype"),
+    url("../fonts/suecaslab-medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: SuecaSlab;
+  src: url("../fonts/suecaslab-bold.eot");
+  src: url("../fonts/suecaslab-bold.eot") format("embedded-opentype"),
+    url("../fonts/suecaslab-bold.woff2") format("woff2"),
+    url("../fonts/suecaslab-bold.woff") format("woff"),
+    url("../fonts/suecaslab-bold.ttf") format("truetype"),
+    url("../fonts/suecaslab-bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+// GENERAL
+* {
+  margin: 2%;
+  padding: 0px;
+}
+
+h1 {
+  margin-left: 15px;
+  position: static;
+  font-family: SuecaSlab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  color: #1c1c1f;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.volver {
+  background-color: #0074c4;
+  padding: 3px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  text-align: right;
+  text-decoration: none;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fefefe;
+}
+em {
+  color: #0074c4;
+  font-style: normal;
+}
+
+// INDEX
+.index {
+  width: auto;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  border: #5a5a5a 4px solid;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-family:SuecaSlab;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    margin:1rem 0px;
+    color: #1c1c1f;
+  }
+  a {
+    text-decoration: none;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 24px;
+    color: #0074c4;
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .index{
+    h1{
+      font-size:2rem ;
+    }
+    h2{
+      font-size:1.3rem ;
+    }
+    a{
+      font-size:1rem ;
+    }
+  }
+}
